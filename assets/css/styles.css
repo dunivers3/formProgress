@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+* {
+  box-sizing: border-box; }
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #e0e0e0; }
+
+body {
+  font-family: "Muli" sans-serif;
+  background-color: #f6f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden; }
+
+.container {
+  text-align: center; }
+  .container .progressContainer {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px; }
+
+.progressContainer::before {
+  content: "";
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: -1; }
+
+.progress {
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  width: 0px;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: 0.4s ease; }
+
+.circle {
+  color: #999;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--secondary-color);
+  transition: 0.4s ease; }
+
+.circle.active {
+  border-color: var(--primary-color); }
+
+.btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 15px; }
+
+.btn:active {
+  transform: scale(0.98); }
+
+.btn:focus {
+  outline: 0; }
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: var(--secondary-color); }
