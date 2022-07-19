@@ -2,6 +2,9 @@ const progressEl = document.getElementById("progress")
 const backEl = document.getElementById("back")
 const nextEl = document.getElementById("next")
 const circles = document.querySelectorAll(".circle")
+const search = document.querySelector(".search")
+const searchButton = document.querySelector(".searchBtn")
+const searchInput = document.querySelector(".input")
 
 let activeEl = 1
 
@@ -44,3 +47,8 @@ function updateProgress() {
 	}
 
 }
+
+searchButton.addEventListener("click", () => {
+	search.classList.toggle("active")
+	searchInput.focus()
+})
