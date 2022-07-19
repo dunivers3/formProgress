@@ -90,9 +90,9 @@ body {
   height: 50px;
   top: 2%;
   left: 85%; }
-  .search.active .input {
+  .search.searchActive .input {
     width: 200px; }
-  .search.active .searchBtn {
+  .search.searchActive .searchBtn {
     transform: translateX(198px); }
 
 .input {
